@@ -2,13 +2,25 @@
     <string name="app_name">Imc App -</string>
 
     <string name="login_titulo">Login</string>
-    <string name="login_subtitulo">Realize o login para continuar </string>
-    <string name="login_et_email"> E-mail</string>
-    <string name="login_et_senha"> Senha</string>
+    <string name="login_subtitulo">Faça login para continuar</string>
+    <string name="login_et_email">E-mail</string>
+    <string name="login_et_senha">Senha</string>
     <string name="login_entrar">Entrar</string>
-    <string name="login_lembrar">Lembrar-Me</string>
-    <string name="login_esqueci">Esqueci a Senha</string>
-    <string name="login_nao_conta">Não Tem uma Conta?</string>
-    <string name="login_criar">Crie uma Conta</string>
+    <string name="login_lembrar_me">Lembrar-me</string>
+    <string name="login_esqueci">Esqueci a senha</string>
+    <string name="login_nao_tem_conta">Não tem uma conta?</string>
+    <string name="trocar_foto_usuario">Trocar foto</string>
+    <string name="dados_pessoais">Dados pessoais</string>
+    <string name="dados_autenticacao">Dados de autenticação</string>
+    <string name="dados_email">Email</string>
+    <string name="dados_senha">Senha</string>
+    <string name="dados_nome">Nome</string>
+    <string name="dados_profissao">Profissão</string>
+    <string name="dados_altura">Altura</string>
+    <string name="dados_peso">Peso</string>
+    <string name="dados_data_nascimento">Data de nascimento</string>
+    <string name="dados_sexo">Sexo</string>
+    <string name="dados_sexo_opcaoM">Masculino</string>
+    <string name="dados_sexo_opcaoF">Feminino</string>
 
 </resources>

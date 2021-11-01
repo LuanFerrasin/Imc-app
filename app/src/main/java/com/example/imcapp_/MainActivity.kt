@@ -13,10 +13,15 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.hide()
 
         val buttonEntrar = findViewById<Button>(R.id.btn_entrar)
+        val buttonNovaConta = findViewById<Button>(R.id.nova_conta)
 
         buttonEntrar.setOnClickListener{
             val abrirDashboard = Intent (this,DashBoardActivity::class.java)
             startActivity(abrirDashboard)
+        }
+        buttonEntrar.setOnClickListener{
+            val abrirNovaConta = Intent (this,UsuarioNovoActivity::class.java)
+            startActivity(abrirNovaConta)
         }
 
     }
