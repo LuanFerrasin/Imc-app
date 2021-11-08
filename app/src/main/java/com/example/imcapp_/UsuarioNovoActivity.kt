@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.RadioButton
+import android.widget.Toast
 import java.util.*
 
 class UsuarioNovoActivity : AppCompatActivity() {
@@ -84,6 +85,22 @@ class UsuarioNovoActivity : AppCompatActivity() {
         if (validaCampos()) {
             // grava os dados
 
+            val  arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
+            val editor = arquivo.edit()
+
+            editor.putString("email", editEmail.text.toString())
+            editor.putString("senha", editSenha.text.toString())
+            editor.putString("nome", editNome.text.toString())
+            editor.putString("profissao", editProfissao.text.toString())
+            editor.putFloat("altura", editAltura.text.toString().toFloat())
+            editor.putString("nascimento", editDataNascimento.text.toString())
+            editor.putString("sexo" , if (radioMasculino.isChecked) "M" else "f")
+            editor.apply()
+
+            Toast.makeText(this, "Usuário Cadastrado com Sucesso!", Toast.LENGTH_SHORT).show()
+            finish()
+
+
         } else {
             // gravou nada!!
         }
@@ -103,8 +120,23 @@ class UsuarioNovoActivity : AppCompatActivity() {
             editSenha.error = "Senha é obrigatório"
             valido = false
         }
+        if(editNome.text.isEmpty()) {
+            editNome.error = "Nome é Obrigatório"
+            valido = false
+        }
+        if(editAltura.text.isEmpty()){
+            editAltura.error = "Altura é Obrigatório"
+            valido = false
+        }
+        if(editDataNascimento.text.isEmpty()){
+            editDataNascimento.error = "Data de Nascimento é Obrigatório"
+            valido = false
+        }
+        if(!radioFeminino.isChecked && !radioFeminino.isChecked){
+            radioMasculino.error = "Gênero é Obrigatório"
+            valido = false
+        }
 
         return valido
     }
-}
 }

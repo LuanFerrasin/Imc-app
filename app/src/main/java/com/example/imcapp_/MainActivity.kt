@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,10 +16,24 @@ class MainActivity : AppCompatActivity() {
 
         val buttonEntrar = findViewById<Button>(R.id.btn_entrar)
         val buttonNovaConta = findViewById<Button>(R.id.nova_conta)
+        val editEmail = findViewById<EditText>(R.id.email)
+        val editSenha = findViewById<EditText>(R.id.senha)
 
         buttonEntrar.setOnClickListener{
-            val abrirDashboard = Intent (this,DashBoardActivity::class.java)
-            startActivity(abrirDashboard)
+
+            val arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
+
+            val email = arquivo.getString("email", "")
+            val senha = arquivo.getString("senha", "")
+
+            if(email == editEmail.text.toString() && senha == editSenha.text.toString()){
+                val abrirDashboard = Intent (this,DashBoardActivity::class.java)
+                startActivity(abrirDashboard)
+            }else{
+                Toast.makeText(this,"Senha ou Usuario Incorretos!!", Toast.LENGTH_SHORT).show()
+            }
+
+
         }
         buttonEntrar.setOnClickListener{
             val abrirNovaConta = Intent (this,UsuarioNovoActivity::class.java)

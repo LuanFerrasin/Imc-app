@@ -27,7 +27,7 @@
                 android:scaleType="centerCrop"/>
         </androidx.cardview.widget.CardView>
 
-        <TextView
+        <TextView android:id="@+id/tv_dash_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Peter Parker"
@@ -35,7 +35,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             android:textColor="@color/white"/>
 
-        <TextView
+        <TextView android:id="@+id/tv_dash_profisssao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fotográfo"
@@ -127,6 +127,7 @@
                 android:textAppearance="@style/dashboard_values"/>
 
             <TextView
+                android:id="@+id/tv_dash_altura"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
