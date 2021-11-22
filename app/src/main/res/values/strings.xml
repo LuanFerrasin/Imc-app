@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Imc App -</string>
-
     <string name="login_titulo">Login</string>
     <string name="login_subtitulo">Faça login para continuar</string>
     <string name="login_et_email">E-mail</string>

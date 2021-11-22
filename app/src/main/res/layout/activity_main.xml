@@ -157,10 +157,10 @@
                     android:text="@string/login_nao_tem_conta"
                     android:layout_marginTop="14dp"/>
 
-                <Button android:id="@+id/nova_conta"
+                <Button android:id="@+id/button_nova_conta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/login_nao_tem_conta"
+                    android:text="Criar uma Nova Conta Agora!"
                     android:layout_gravity="end"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:textAllCaps="false"/>

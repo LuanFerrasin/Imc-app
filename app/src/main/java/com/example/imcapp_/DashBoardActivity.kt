@@ -6,16 +6,21 @@ import android.widget.TextView
 
 class DashBoardActivity : AppCompatActivity() {
 
-    lateinit var tvNome: TextView = findViewById(R.id.tv_dash_name)
-    lateinit var tvProfissao: TextView = findViewById(R.id.tv_dash_profisssao)
-    lateinit var tvAltura: TextView = findViewById(R.id.tv_dash_altura)
+    lateinit var tvNome: TextView
+    lateinit var tvProfissao: TextView
+    lateinit var tvAltura: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
 
+        tvNome = findViewById(R.id.tv_dash_name)
+        tvProfissao = findViewById(R.id.tv_dash_profisssao)
+        tvAltura = findViewById(R.id.tv_dash_altura)
+
         preencherDashboard()
+
         supportActionBar!!.hide()
     }
     private fun preencherDashboard(){
